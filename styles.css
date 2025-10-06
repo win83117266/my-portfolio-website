@@ -51,6 +51,13 @@ nav.scrolled {
   font-weight: bold;
   color: var(--white-color);
 }
+
+.logo img {
+  height: 70px; /* 可依實際大小調整，如 40~70px */
+  width: auto;
+  display: block;
+}
+
 .menu {
   display: flex;
   list-style: none;
