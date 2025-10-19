@@ -328,3 +328,99 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* --- Hero Section 改良 --- */
+.hero-sustainability {
+  position: relative;
+  background-color: #f7931e;
+  color: white;
+  text-align: center;
+  padding-top: 120px; /* 避開固定導覽列 */
+  padding-bottom: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-sustainability h1 {
+  font-size: 2.6rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.hero-sustainability p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+/* --- 永續內容區改善 --- */
+.sustainability-content {
+  max-width: 950px;
+  margin: 80px auto;
+  padding: 0 30px;
+  line-height: 1.9;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+.sustainability-content section {
+  margin-bottom: 70px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #eee;
+}
+
+.sustainability-content h2 {
+  color: #f15a24;
+  border-left: 6px solid #f7931e;
+  padding-left: 12px;
+  margin-bottom: 25px;
+  font-size: 1.6rem;
+}
+
+.sustainability-content h3 {
+  color: #222;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.sustainability-content p {
+  margin-top: 10px;
+  text-align: justify;
+  color: #444;
+}
+
+/* --- 響應式 --- */
+@media (max-width: 768px) {
+  .hero-sustainability {
+    padding-top: 100px;
+    padding-bottom: 80px;
+  }
+  .hero-sustainability h1 {
+    font-size: 2rem;
+  }
+  .hero-sustainability p {
+    font-size: 1rem;
+  }
+  .sustainability-content {
+    padding: 0 18px;
+    font-size: 0.95rem;
+  }
+}
