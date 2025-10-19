@@ -424,3 +424,29 @@ footer {
     font-size: 0.95rem;
   }
 }
+
+/* --- 服務卡片連結按鈕樣式 (空心) --- */
+.service-link {
+  /* 1. 外觀設定 */
+  display: inline-block;
+  padding: 8px 18px; /* 內邊距可以稍小一點 */
+  margin-top: 15px;
+  border: 2px solid #007bff; /* 邊框 (請換成您的品牌主色) */
+  color: #007bff; /* 文字顏色 (同品牌主色) */
+  background-color: transparent; /* 背景透明 */
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+
+  /* 2. 過渡效果 */
+  transition: all 0.3s ease;
+
+  /* 3. 滑鼠指標 */
+  cursor: pointer;
+}
+
+/* 3. 滑鼠懸停 (Hover) 效果 */
+.service-link:hover {
+  background-color: #007bff; /* 滑鼠移上去時，背景填滿 */
+  color: #ffffff; /* 文字變白色 */
+}
