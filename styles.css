@@ -450,3 +450,111 @@ footer {
   background-color: #007bff; /* 滑鼠移上去時，背景填滿 */
   color: #ffffff; /* 文字變白色 */
 }
+
+/* --- 總經理簽名區塊 (永續頁面) --- */
+.signature-block {
+  display: flex; /* 啟用 Flexbox */
+  justify-content: space-between; /* 讓文字和圖片組水平拉開 */
+  align-items: flex-end; /* 讓兩者的「底部」對齊 */
+
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid var(--light-gray, #eee);
+}
+
+.signature-block .final-quote {
+  flex: 1; /* 讓文字區塊自動填滿左側 */
+  margin: 0;
+  text-align: justify;
+  color: var(--text-color, #444);
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding-right: 25px; /* 避免文字和圖片黏在一起 */
+}
+
+/* 這是新的圖片組容器 */
+.signature-image-group {
+  display: flex;
+  flex-direction: column; /* 讓圖片「垂直堆疊」 */
+  align-items: center; /* 讓兩張圖片彼此置中對齊 */
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+
+/* --- 總經理簽名區塊 (永續頁面) --- */
+.signature-block {
+  display: flex; /* 啟用 Flexbox */
+  justify-content: space-between; /* 讓文字和圖片組水平拉開 */
+  align-items: flex-end; /* 讓兩者的「底部」對齊 */
+
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid var(--light-gray, #eee);
+}
+
+.signature-block .final-quote {
+  flex: 1; /* 讓文字區塊自動填滿左側 */
+  margin: 0;
+  text-align: justify;
+  color: var(--text-color, #444);
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding-right: 25px; /* 避免文字和圖片黏在一起 */
+}
+
+/* 這是新的圖片組容器 (Desktop) */
+.signature-image-group {
+  display: flex;
+  flex-direction: row; /* 1. 改為「水平排列」 */
+  align-items: flex-end; /* 2. 讓兩張圖的底部對齊 */
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+
+/* 公司印章圖檔 (Desktop) */
+.signature-image-group .company-seal {
+  /* 3. 設定印章尺寸 (3x3 比例) */
+  height: 80px;
+  width: 80px;
+  display: block;
+  margin-right: 20px; /* 4. 印章和簽名之間的間距 */
+}
+
+/* 總經理簽名圖檔 (Desktop) */
+.signature-image-group .gm-signature {
+  /* 5. 簽名高度為印章一半 (1.5) */
+  height: 40px; /* (80px / 2 = 40px) */
+  width: auto;
+  display: block;
+}
+
+/* --- 響應式：當螢幕寬度小於 768px 時 --- */
+@media (max-width: 768px) {
+  .signature-block {
+    flex-direction: column; /* (手機) 讓文字和圖片組改為「垂直堆疊」 */
+    align-items: flex-start;
+  }
+
+  .signature-block .final-quote {
+    padding-right: 0; /* 垂直堆疊時，不需要右邊距 */
+  }
+
+  /* (手機) 圖片組的設定 */
+  .signature-image-group {
+    margin-left: 0; /* 移除左邊距 */
+    margin-top: 30px; /* 增加和上方文字的間距 */
+    align-self: flex-end; /* (關鍵) 讓整組圖片靠到最右邊 */
+  }
+
+  /* (Mobile) 印章尺寸 (維持 1:1) */
+  .signature-image-group .company-seal {
+    height: 60px;
+    width: 60px;
+    margin-right: 15px; /* (手機) 水平間距 */
+  }
+
+  /* (Mobile) 簽名尺寸 (維持印章一半) */
+  .signature-image-group .gm-signature {
+    height: 30px; /* (60px / 2 = 30px) */
+  }
+}
